@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Quiz - Management</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<a href="revision.html" class="back-btn">
+⬅ Retour à l'accueil
+</a>
+
+<main class="chapter-content">
+
+<div class="section-title">
+
+<span>📊 Management</span>
+
+<h1>🚀 Quiz Management</h1>
+
+<div id="quizContainer"></div>
+
+<div id="resultatQuiz"></div>
+
+</div>
+
+<script>
+
+const questions = [
+
+/* CHAPITRE 1 */
+
+{
+question:"Qui associe l'entrepreneur à l'innovation ?",
+options:["Porter","Schumpeter","Simon","Drucker"],
+answer:1
+},
+
+{
+question:"Qu'est-ce que la destruction créatrice ?",
+options:[
+"Une baisse des prix",
+"Le remplacement des anciennes activités par les innovations",
+"La faillite d'une entreprise",
+"Une fusion"
+],
+answer:1
+},
+
+{
+question:"Quelle est la première étape du projet entrepreneurial ?",
+options:[
+"Business plan",
+"Financement",
+"Trouver une idée",
+"Choisir un statut"
+],
+answer:2
+},
+
+{
+question:"Le manager a pour mission principale de :",
+options:[
+"Créer l'entreprise",
+"Coordonner les ressources",
+"Investir",
+"Déposer des brevets"
+],
+answer:1
+},
+
+{
+question:"Selon Drucker, le but de l'entreprise est :",
+options:[
+"Créer et conserver un client",
+"Faire du profit uniquement",
+"Réduire les coûts",
+"Vendre plus"
+],
+answer:0
+},
+
+/* CHAPITRE 2 */
+
+{
+question:"Une finalité correspond à :",
+options:[
+"Un objectif chiffré",
+"La raison d'être de l'entreprise",
+"Une stratégie",
+"Un budget"
+],
+answer:1
+},
+
+{
+question:"Quelle finalité vise la rentabilité ?",
+options:[
+"Sociale",
+"Environnementale",
+"Financière",
+"Sociétale"
+],
+answer:2
+},
+
+{
+question:"Quelle ressource est immatérielle ?",
+options:[
+"Machine",
+"Marque",
+"Bâtiment",
+"Camion"
+],
+answer:1
+},
+
+{
+question:"La RSE signifie :",
+options:[
+"Responsabilité Sociétale des Entreprises",
+"Réseau Social d'Entreprise",
+"Ressource Sociale Européenne",
+"Règlement Social Européen"
+],
+answer:0
+},
+
+{
+question:"Les ressources humaines regroupent :",
+options:[
+"Les salariés",
+"Les brevets",
+"Les bâtiments",
+"Les logiciels"
+],
+answer:0
+},
+
+/* CHAPITRE 4 */
+
+{
+question:"Qui a développé la théorie de la rationalité limitée ?",
+options:[
+"Simon",
+"Porter",
+"Schumpeter",
+"Likert"
+],
+answer:0
+},
+
+{
+question:"Une décision stratégique concerne :",
+options:[
+"Le court terme",
+"Le long terme",
+"Une journée",
+"Une semaine"
+],
+answer:1
+},
+
+{
+question:"Quelle étape vient après l'intelligence chez Simon ?",
+options:[
+"Choix",
+"Évaluation",
+"Modélisation",
+"Contrôle"
+],
+answer:2
+},
+
+{
+question:"Une décision opérationnelle concerne :",
+options:[
+"La gestion quotidienne",
+"La fusion",
+"La stratégie",
+"L'investissement majeur"
+],
+answer:0
+},
+
+/* CHAPITRE 5 */
+
+{
+question:"Combien de dimensions comporte le PESTEL ?",
+options:["4","5","6","7"],
+answer:2
+},
+
+{
+question:"Le T du PESTEL signifie :",
+options:[
+"Travail",
+"Technologique",
+"Transport",
+"Territorial"
+],
+answer:1
+},
+
+{
+question:"Qui a créé le modèle des 5 forces ?",
+options:[
+"Porter",
+"Simon",
+"Drucker",
+"Likert"
+],
+answer:0
+},
+
+{
+question:"Les clients appartiennent au :",
+options:[
+"Macro-environnement",
+"Micro-environnement",
+"PESTEL",
+"Management"
+],
+answer:1
+},
+
+{
+question:"NCA signifie :",
+options:[
+"Non Consommateurs Absolus",
+"Nombre de Clients Actifs",
+"Nouvelle Concurrence Active",
+"Norme de Consommation"
+],
+answer:0
+},
+
+/* CHAPITRE 6 */
+
+{
+question:"L'innovation de produit correspond à :",
+options:[
+"Nouvelle organisation",
+"Nouveau bien ou service",
+"Nouveau fournisseur",
+"Nouveau salarié"
+],
+answer:1
+},
+
+{
+question:"La veille technologique sert à :",
+options:[
+"Anticiper les évolutions",
+"Recruter",
+"Former",
+"Licencier"
+],
+answer:0
+},
+
+{
+question:"L'innovation crée principalement :",
+options:[
+"Un avantage concurrentiel",
+"Des impôts",
+"Du chômage",
+"Des conflits"
+],
+answer:0
+},
+
+{
+question:"Qui est associé à l'innovation ?",
+options:[
+"Schumpeter",
+"Crozier",
+"Likert",
+"Simon"
+],
+answer:0
+},
+
+/* CHAPITRE 7 */
+
+{
+question:"Combien de fonctions du management ?",
+options:["2","3","4","5"],
+answer:2
+},
+
+{
+question:"Le management stratégique est :",
+options:[
+"Long terme",
+"Court terme",
+"Journalier",
+"Hebdomadaire"
+],
+answer:0
+},
+
+{
+question:"Le management opérationnel concerne :",
+options:[
+"La stratégie globale",
+"Le quotidien",
+"La vision",
+"Les actionnaires"
+],
+answer:1
+},
+
+/* CHAPITRE 8 */
+
+{
+question:"Quel style est jugé le plus efficace par Likert ?",
+options:[
+"Autoritaire",
+"Paternaliste",
+"Participatif",
+"Consultatif"
+],
+answer:2
+},
+
+{
+question:"Le management 9,9 appartient à :",
+options:[
+"Porter",
+"Simon",
+"Blake et Mouton",
+"Drucker"
+],
+answer:2
+},
+
+/* CHAPITRE 9 */
+
+{
+question:"Les salariés sont des parties prenantes :",
+options:[
+"Externes",
+"Internes",
+"Publiques",
+"Indirectes"
+],
+answer:1
+},
+
+{
+question:"Selon Cyert et March, l'entreprise est :",
+options:[
+"Une coalition d'acteurs",
+"Une machine",
+"Un marché",
+"Une hiérarchie parfaite"
+],
+answer:0
+},
+
+{
+question:"Selon Crozier et Friedberg, le pouvoir provient notamment de :",
+options:[
+"La richesse",
+"La maîtrise des zones d'incertitude",
+"L'ancienneté",
+"Le diplôme"
+],
+answer:1
+}
+
+];
+
+let score = 0;
+let reponses = 0;
+
+const quizContainer = document.getElementById("quizContainer");
+
+questions.forEach((q,index)=>{
+
+let bloc = document.createElement("div");
+bloc.className = "quiz-question";
+
+bloc.innerHTML = `<h3>${index+1}. ${q.question}</h3>`;
+
+q.options.forEach((option,i)=>{
+
+let btn = document.createElement("button");
+
+btn.className = "quiz-btn";
+btn.innerText = option;
+
+btn.onclick = function(){
+
+if(btn.disabled) return;
+
+reponses++;
+
+if(i === q.answer){
+
+btn.classList.add("good");
+score++;
+
+}else{
+
+btn.classList.add("bad");
+
+}
+
+bloc.querySelectorAll("button").forEach(b=>b.disabled=true);
+
+if(reponses === questions.length){
+
+afficherResultat();
+
+}
+
+};
+
+bloc.appendChild(btn);
+
+});
+
+quizContainer.appendChild(bloc);
+
+});
+
+function afficherResultat(){
+
+let pourcentage = Math.round((score/questions.length)*100);
+
+let niveau = "";
+
+if(pourcentage < 40){
+
+niveau = "🔴 Niveau faible";
+
+}else if(pourcentage < 70){
+
+niveau = "🟠 Niveau moyen";
+
+}else if(pourcentage < 90){
+
+niveau = "🟢 Bon niveau BTS";
+
+}else{
+
+niveau = "🏆 Excellent niveau BTS";
+
+}
+
+document.getElementById("resultatQuiz").innerHTML = `
+<h2>Résultat final</h2>
+<p>Score : ${score} / ${questions.length}</p>
+<p>Réussite : ${pourcentage}%</p>
+<p>${niveau}</p>
+`;
+
+}
+
+</script>
+
+</div>
+
+
+</main>
+
+</body>
+
+</html>

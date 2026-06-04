@@ -1,0 +1,794 @@
+/* ==================================
+   RESET
+================================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+/* ==================================
+   BODY
+================================== */
+
+body{
+font-family:'Inter',sans-serif;
+background:#eef4ff;
+color:#1e293b;
+line-height:1.6;
+}
+
+/* ==================================
+   NAVBAR
+================================== */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:20px 40px;
+
+background:white;
+
+box-shadow:0 2px 10px rgba(0,0,0,.05);
+
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-size:2rem;
+font-weight:700;
+color:#1e293b;
+}
+
+.nav-links{
+display:flex;
+gap:30px;
+}
+
+.nav-links a{
+text-decoration:none;
+font-weight:600;
+color:#2563eb;
+transition:.3s;
+}
+
+.nav-links a:hover{
+color:#1d4ed8;
+}
+
+/* ==================================
+   CONTENU PRINCIPAL
+================================== */
+
+main{
+max-width:1300px;
+margin:auto;
+padding:30px;
+}
+
+/* ==================================
+   HERO ACCUEIL
+================================== */
+
+.hero{
+background:white;
+
+padding:50px;
+
+border-radius:25px;
+
+text-align:center;
+
+margin-bottom:35px;
+
+box-shadow:0 5px 20px rgba(0,0,0,.05);
+}
+
+.hero h1{
+font-size:3rem;
+margin-bottom:10px;
+color:#2563eb;
+}
+
+.hero p{
+color:#64748b;
+font-size:1.1rem;
+}
+
+.hero button{
+margin-top:20px;
+
+padding:14px 25px;
+
+background:#2563eb;
+color:white;
+
+border:none;
+border-radius:12px;
+
+cursor:pointer;
+
+font-weight:600;
+}
+
+.hero button:hover{
+background:#1d4ed8;
+}
+
+/* ==================================
+   CARTES GENERALES
+================================== */
+
+.card{
+background:white;
+
+padding:25px;
+
+border-radius:20px;
+
+margin-bottom:30px;
+
+box-shadow:0 5px 20px rgba(0,0,0,.05);
+}
+
+.card h2{
+font-size:2rem;
+margin-bottom:20px;
+color:#2563eb;
+}
+
+/* ==================================
+   TABLEAU DE BORD
+================================== */
+
+.stats{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.stat{
+background:#f8fbff;
+
+padding:20px;
+
+border-radius:15px;
+
+text-align:center;
+}
+
+.stat h3{
+font-size:1rem;
+margin-bottom:8px;
+color:#2563eb;
+}
+
+.stat p{
+font-size:1.8rem;
+font-weight:700;
+}
+
+/* ==================================
+   MATIERES
+================================== */
+
+.matiere-grid{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(220px,1fr));
+
+gap:20px;
+}
+
+.matiere{
+background:white;
+
+border:2px solid #dbeafe;
+
+padding:25px;
+
+border-radius:18px;
+
+text-decoration:none;
+
+color:#1e293b;
+
+text-align:center;
+
+transition:.3s;
+}
+
+.matiere:hover{
+transform:translateY(-4px);
+
+box-shadow:
+0 10px 20px rgba(37,99,235,.1);
+}
+
+.icon{
+font-size:2rem;
+margin-bottom:10px;
+}
+
+.matiere h3{
+margin:10px 0;
+font-size:1.2rem;
+}
+
+.matiere p{
+color:#64748b;
+font-size:.95rem;
+}
+
+/* ==================================
+   TITRE MATIERE
+================================== */
+
+.section-title{
+background:linear-gradient(
+135deg,
+#2563eb,
+#60a5fa
+);
+
+padding:30px 40px;
+
+border-radius:20px;
+
+margin-bottom:30px;
+
+color:white;
+}
+
+.section-title span{
+font-size:.9rem;
+opacity:.9;
+letter-spacing:1px;
+}
+
+.section-title h1{
+font-size:2.8rem;
+margin:8px 0;
+color:white;
+}
+
+.section-title p{
+font-size:1rem;
+}
+
+/* ==================================
+   CHAPITRES
+================================== */
+
+.chapter-grid{
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(320px,1fr));
+
+gap:20px;
+}
+
+.chapter-card{
+background:white;
+
+padding:22px;
+
+border-radius:18px;
+
+border:2px solid #dbeafe;
+
+text-decoration:none;
+
+color:#1e293b;
+
+transition:.3s;
+
+box-shadow:
+0 3px 12px rgba(0,0,0,.05);
+}
+
+.chapter-card:hover{
+transform:translateY(-4px);
+
+border-color:#2563eb;
+}
+
+.chapter-number{
+font-size:.85rem;
+font-weight:700;
+color:#2563eb;
+margin-bottom:10px;
+}
+
+.chapter-card h3{
+font-size:1.3rem;
+line-height:1.4;
+margin-bottom:12px;
+}
+
+.chapter-card p{
+font-size:.95rem;
+line-height:1.5;
+color:#64748b;
+margin-bottom:15px;
+}
+
+.chapter-badge{
+display:inline-block;
+
+padding:6px 12px;
+
+background:#dbeafe;
+
+color:#2563eb;
+
+border-radius:20px;
+
+font-size:.8rem;
+
+font-weight:600;
+}
+
+/* ==================================
+   FLASHCARDS
+================================== */
+
+.flash{
+background:white;
+
+padding:20px;
+
+border-radius:15px;
+
+border:2px solid #dbeafe;
+
+margin-bottom:15px;
+}
+
+.flash:hover{
+background:#eff6ff;
+}
+
+/* ==================================
+   QUIZ
+================================== */
+
+.quiz-question{
+background:white;
+
+padding:20px;
+
+border-radius:15px;
+
+margin-bottom:20px;
+}
+
+.quiz-btn{
+width:100%;
+
+padding:12px;
+
+margin-top:10px;
+
+border:none;
+
+border-radius:10px;
+
+background:#dbeafe;
+
+cursor:pointer;
+}
+
+.quiz-btn:hover{
+background:#bfdbfe;
+}
+
+.good{
+background:#22c55e !important;
+color:white;
+}
+
+.bad{
+background:#ef4444 !important;
+color:white;
+}
+
+/* ==================================
+   MEMO
+================================== */
+
+.memo{
+background:#eff6ff;
+
+border-left:5px solid #2563eb;
+
+padding:20px;
+
+border-radius:12px;
+
+margin:20px 0;
+}
+
+/* ==================================
+   TABLEAUX
+================================== */
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+th{
+background:#2563eb;
+color:white;
+padding:12px;
+text-align:left;
+}
+
+td{
+padding:12px;
+border-bottom:1px solid #dbeafe;
+background:white;
+}
+
+/* ==================================
+   BOUTON RETOUR
+================================== */
+
+.back-btn{
+display:inline-block;
+
+padding:10px 18px;
+
+background:#2563eb;
+color:white;
+
+text-decoration:none;
+
+border-radius:10px;
+
+margin-bottom:20px;
+}
+
+/* ==================================
+   RESPONSIVE
+================================== */
+
+@media(max-width:1000px){
+
+.navbar{
+flex-direction:column;
+gap:15px;
+}
+
+.nav-links{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.stats{
+grid-template-columns:1fr 1fr;
+}
+
+}
+
+@media(max-width:700px){
+
+main{
+padding:15px;
+}
+
+.stats{
+grid-template-columns:1fr;
+}
+
+.chapter-grid{
+grid-template-columns:1fr;
+}
+
+.hero h1,
+.section-title h1{
+font-size:2rem;
+}
+
+.logo{
+font-size:1.6rem;
+}
+
+}
+
+/* ==================================
+   PAGE ACCUEIL UNIQUEMENT
+================================== */
+
+.home-page main{
+max-width:1400px;
+margin:auto;
+padding:40px;
+}
+
+/* NAVBAR */
+
+.home-page .navbar{
+padding:20px 50px;
+}
+
+.home-page .logo{
+font-size:3rem;
+font-weight:700;
+white-space:nowrap;
+}
+
+.home-page .nav-links{
+display:flex;
+gap:40px;
+}
+
+/* HERO */
+
+.home-page .hero{
+background:white;
+
+padding:60px;
+
+border-radius:30px;
+
+text-align:center;
+
+margin-bottom:40px;
+
+box-shadow:
+0 5px 20px rgba(0,0,0,.05);
+}
+
+.home-page .hero h1{
+font-size:3.5rem;
+color:#2563eb;
+margin-bottom:15px;
+}
+
+.home-page .hero button{
+margin-top:20px;
+
+padding:15px 25px;
+
+background:#2563eb;
+color:white;
+
+border:none;
+
+border-radius:12px;
+
+font-weight:600;
+cursor:pointer;
+}
+
+/* TABLEAU DE BORD */
+
+.home-page .card{
+background:white;
+
+padding:30px;
+
+border-radius:25px;
+
+margin-bottom:40px;
+
+box-shadow:
+0 5px 20px rgba(0,0,0,.05);
+}
+
+.home-page .stats{
+display:grid;
+
+grid-template-columns:
+repeat(4,1fr);
+
+gap:20px;
+}
+
+.home-page .stat{
+background:#f8fbff;
+
+padding:20px;
+
+border-radius:15px;
+
+text-align:center;
+}
+
+.home-page .stat h3{
+font-size:1rem;
+color:#2563eb;
+margin-bottom:10px;
+}
+
+.home-page .stat p{
+font-size:1.8rem;
+font-weight:700;
+}
+
+/* MES MATIERES */
+
+.home-page .matiere-grid{
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+}
+
+.home-page .matiere{
+background:white;
+
+border:2px solid #dbeafe;
+
+padding:30px;
+
+border-radius:20px;
+
+text-decoration:none;
+
+color:#1e293b;
+
+text-align:center;
+
+transition:.3s;
+}
+
+.home-page .matiere:hover{
+transform:translateY(-4px);
+
+box-shadow:
+0 10px 25px rgba(37,99,235,.12);
+}
+
+.home-page .matiere h3{
+font-size:1.5rem;
+margin:10px 0;
+}
+
+.home-page .matiere p{
+font-size:1rem;
+color:#64748b;
+}
+
+.home-page .icon{
+font-size:2.5rem;
+margin-bottom:15px;
+}
+
+/* ==================================
+   PAGE CHAPITRE
+================================== */
+
+.chapter-page{
+max-width:1100px;
+margin:auto;
+padding:30px;
+}
+
+/* Bannière */
+
+.chapter-hero{
+background:linear-gradient(
+135deg,
+#2563eb,
+#60a5fa
+);
+
+padding:40px;
+
+border-radius:25px;
+
+color:white;
+
+margin-bottom:30px;
+}
+
+.chapter-hero span{
+font-size:.9rem;
+opacity:.9;
+}
+
+.chapter-hero h1{
+font-size:2.5rem;
+margin-top:10px;
+}
+
+/* Cartes de cours */
+
+.course-card{
+background:white;
+
+padding:30px;
+
+border-radius:20px;
+
+margin-bottom:25px;
+
+box-shadow:
+0 5px 15px rgba(0,0,0,.05);
+}
+
+.course-card h2{
+color:#2563eb;
+margin-bottom:15px;
+font-size:1.6rem;
+}
+
+.course-card h3{
+margin-top:20px;
+margin-bottom:10px;
+color:#1e293b;
+}
+
+.course-card p{
+margin-bottom:12px;
+}
+
+.course-card ul{
+padding-left:25px;
+}
+
+.course-card li{
+margin-bottom:10px;
+}
+
+/* Bloc important */
+
+.memo{
+background:#eff6ff;
+
+border-left:5px solid #2563eb;
+
+padding:20px;
+
+border-radius:12px;
+
+margin:20px 0;
+}
+
+/* Flashcards */
+
+.flashcard{
+background:#f8fbff;
+
+padding:20px;
+
+border-radius:15px;
+
+margin-bottom:15px;
+
+border:2px solid #dbeafe;
+}
+
+/* Bouton retour */
+
+.back-btn{
+display:inline-block;
+
+margin-bottom:25px;
+
+padding:12px 18px;
+
+background:#2563eb;
+color:white;
+
+text-decoration:none;
+
+border-radius:10px;
+}
+
